@@ -1,0 +1,66 @@
+//
+//  PrefixHeader.pch
+//  KTAiXianFeng
+//
+//  Created by WangBiao on 2016/10/10.
+//  Copyright © 2016年 lsrain. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+/**导入框架头文件**/
+#import <Masonry.h>
+#import <UIImageView+WebCache.h>
+#import <YYModel.h>
+#import <AFHTTPSessionManager.h>
+
+
+
+//*****分割
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+//#import "AppConst.h"
+//#import "UIImageView+Extention.h"
+
+typedef void(^CompleteBlock)(id data,NSError *error);
+
+typedef NS_ENUM(NSInteger, HeadViewItemType) {
+    HeadViewItemTypePage,
+    HeadViewItemTypeHot,
+    HeadViewItemTypeHeadline,
+    HeadViewItemTypeBrand,
+    HeadViewItemTypeScene
+    
+};
+typedef void(^ClikedCallback)(HeadViewItemType type,NSInteger tag);
+
+// 颜色
+/** 随机色 */
+#define MGRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define MGRandomColor MGRGBColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+
+#define Width  [[UIScreen mainScreen] bounds].size.width
+#define Height [[UIScreen mainScreen] bounds].size.height
+
+//屏幕的高度和宽度
+#define MGSCREEN_width [UIScreen mainScreen].bounds.size.width
+#define MGSCREEN_height [UIScreen mainScreen].bounds.size.height
+
+//字体
+#define MGFont(x) [UIFont systemFontOfSize:x]
+#define MGBoldFont(x) [UIFont boldSystemFontOfSize:x]
+
+
+//宏
+#define modelNoti @"modelNoti"
+#define modelName @"modelName"
+#define modelimgURL @"modelimgURL"
+#define modelPrice @"modelPrice"
+
+
+#endif /* PrefixHeader_pch */

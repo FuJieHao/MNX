@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+       
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYSearchView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B00-J0-E6d">
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="搜索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64n-dO-3yg">
+                            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="259" id="9jE-6N-gaz"/>
+                                <constraint firstAttribute="height" constant="30" id="nfw-mQ-5vx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5p1-hy-o2t">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="UjY-Wn-i9a"/>
+                                <constraint firstAttribute="width" constant="40" id="bur-0Z-3LO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="YYCancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Hd-hZ-T5g"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="64n-dO-3yg" secondAttribute="bottom" constant="5" id="1uW-M5-NoS"/>
+                        <constraint firstItem="64n-dO-3yg" firstAttribute="top" secondItem="B00-J0-E6d" secondAttribute="top" constant="5" id="FlZ-Gk-v8U"/>
+                        <constraint firstItem="5p1-hy-o2t" firstAttribute="top" secondItem="B00-J0-E6d" secondAttribute="top" constant="5" id="GYP-Co-hCg"/>
+                        <constraint firstAttribute="width" constant="320" id="HxI-H4-xUi"/>
+                        <constraint firstAttribute="trailing" secondItem="5p1-hy-o2t" secondAttribute="trailing" constant="6" id="SpL-vk-DG3"/>
+                        <constraint firstAttribute="bottom" secondItem="5p1-hy-o2t" secondAttribute="bottom" constant="5" id="Wem-ON-x4R"/>
+                        <constraint firstItem="64n-dO-3yg" firstAttribute="leading" secondItem="B00-J0-E6d" secondAttribute="leading" constant="8" id="afA-zJ-ohc"/>
+                        <constraint firstItem="5p1-hy-o2t" firstAttribute="leading" secondItem="64n-dO-3yg" secondAttribute="trailing" constant="7" id="cDt-ks-pYT"/>
+                        <constraint firstAttribute="height" constant="40" id="o3k-1G-iMW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="B00-J0-E6d" secondAttribute="bottom" id="6TQ-dZ-4JT"/>
+                <constraint firstItem="B00-J0-E6d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6Wc-U3-XFF"/>
+                <constraint firstItem="B00-J0-E6d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DaE-cg-pi4"/>
+                <constraint firstAttribute="trailing" secondItem="B00-J0-E6d" secondAttribute="trailing" id="aEM-Tb-10S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="YYBgView" destination="B00-J0-E6d" id="eZY-yM-Ms0"/>
+                <outlet property="YYSearch" destination="64n-dO-3yg" id="fB8-c3-VtD"/>
+            </connections>
+            <point key="canvasLocation" x="281" y="150"/>
+        </view>
+    </objects>
+</document>
